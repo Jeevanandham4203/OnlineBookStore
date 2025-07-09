@@ -1,0 +1,17 @@
+
+<div class="container mt-5">
+    <div class="container mt-5">
+        <h3 class="mb-4 text-center">👤 User Profile</h3>
+        <p><strong>Name:</strong> {{ user?.name }}</p>
+        <p><strong>Email:</strong> {{ user?.email }}</p>  
+  
+      <!-- Back Button placed below Email and aligned left -->
+      <button 
+        class="btn btn-sm btn-outline-primary" 
+        style="font-size: 13px; padding: 4px 12px;" 
+        (click)="goBack()">
+        ← Back
+      </button>
+    </div>
+  </div>
+  

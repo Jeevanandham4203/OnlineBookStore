@@ -1,0 +1,34 @@
+<div class="container mt-5">
+    <h2>➕ Add New Book</h2>
+  
+    <form (ngSubmit)="onSubmit()" #bookForm="ngForm" class="mt-4">
+      <div class="mb-3">
+        <label>Title</label>
+        <input type="text" class="form-control" [(ngModel)]="book.title" name="title" required>
+      </div>
+  
+      <div class="mb-3">
+        <label>Author</label>
+        <input type="text" class="form-control" [(ngModel)]="book.author" name="author" required>
+      </div>
+  
+      <div class="mb-3">
+        <label>Price</label>
+        <input type="number" class="form-control" [(ngModel)]="book.price" name="price" required>
+      </div>
+  
+      <div class="mb-3">
+        <label>Quantity</label>
+        <input type="number" class="form-control" [(ngModel)]="book.quantity" name="quantity" required>
+      </div>
+  
+      <div class="mb-3">
+        <label>Book Image</label>
+        <input type="file" (change)="onFileSelected($event)" class="form-control" accept="image/*">
+      </div>
+  
+      <button class="btn btn-success">📥 Submit Book</button>
+      <a routerLink="/bookstore" class="btn skyblue-btn ms-2" style="color: black; font-weight: 600;">🔙 Back</a>
+    </form>
+  </div>
+  
